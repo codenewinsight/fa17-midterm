@@ -8,12 +8,12 @@ import './interfaces/ERC20Interface.sol';
  * Is deployed by `Crowdsale.sol`, keeps track of balances, etc.
  */
 
-mapping (address => uint256) private _balances;
-mapping (address => mapping (address =>uint256)) private _allowed;
+/* mapping (address => uint256) private _balances;
+mapping (address => mapping (address =>uint256)) private _allowed; */
 
 contract Token is ERC20Interface {
 
-      /// @param _owner The address from which the balance will be retrieved
+      /* /// @param _owner The address from which the balance will be retrieved
       /// @return The balance
       function balanceOf(address _owner) constant returns (uint256 balance){
         return _balances[_owner];
@@ -79,4 +79,5 @@ contract Token is ERC20Interface {
 
       event Transfer(address indexed _from, address indexed _to, uint256 _value);
       event Approval(address indexed _owner, address indexed _spender, uint256 _value);
+*/
 }
