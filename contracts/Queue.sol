@@ -11,10 +11,10 @@ contract Queue {
 	/* State variables */
 	uint8 private size = 5;
 	uint8 private index = 0xFF;
-	mapping (unit8 => address) private _addresses;
+	mapping (uint8 => address) private _addresses;
 	mapping (address => uint8) private _indexes;
 	mapping (address => uint256) private _releaseTime;
-	uint8 private constant _timeDiff = 3600;
+	uint8 constant _timeDiff = 3600;
 
 	/* Add events */
 	event Enqueue(address _sender);
