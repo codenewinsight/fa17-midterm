@@ -1,7 +1,7 @@
 'use strict';
 
 /* Add the dependencies you're testing */
-const Crowdsale = artifacts.require("./Queue.sol");
+const BuyerQueue = artifacts.require("./BuyerQueue.sol");
 // YOUR CODE HERE
 
 contract('QueueTest', function(accounts) {
@@ -14,7 +14,7 @@ contract('QueueTest', function(accounts) {
 
 	/* Do something before every `describe` method */
 	beforeEach(async function() {
-		queue = await Queue.new();
+		queue = await BuyerQueue.new();
 
 	});
 
@@ -24,18 +24,64 @@ contract('QueueTest', function(accounts) {
 	 */
 	describe('Queue', function() {
 		it("Constrcutor", async function() {
-			let index = await queue.qsize.call();
-			/* Why do you think `.valueOf()` is necessary? */
-			assert.equal(index.valueOf(), 0,
-				"value set correctly");
+			let currentSize = await queue.qsize.call();
+
+			assert.equal(currentSize.valueOf(), 0,	"size inited");
+
 		});
-		// YOUR CODE HERE
+
+		it("enqueue", async function() {
+			let currentSize = await queue.qsize.call();
+			assert.equal(currentSize.valueOf(), 0,	"size inited");
+
+			//Add address
+			queue.enqueue(accounts[0]);
+			currentSize = await queue.qsize.call();
+			assert.equal(currentSize.valueOf(), 1,	"addr 0");
+
+            // //can't addd the same
+			// queue.enqueue(accounts[0]);
+			// currentSize = await queue.qsize.call();
+			// assert.equal(currentSize.valueOf(), 1,	"cant add the same addr");
+
+            //add more addrs
+			queue.enqueue(accounts[1]);
+			currentSize = await queue.qsize.call();
+			assert.equal(currentSize.valueOf(), 2,	"addr 1");
+
+			queue.enqueue(accounts[2]);
+			currentSize = await queue.qsize.call();
+			assert.equal(currentSize.valueOf(), 3,	"addr 2");
+
+			queue.enqueue(accounts[3]);
+			currentSize = await queue.qsize.call();
+			assert.equal(currentSize.valueOf(), 4,	"addr 3");
+
+			queue.enqueue(accounts[4]);
+			currentSize = await queue.qsize.call();
+			assert.equal(currentSize.valueOf(), 5,	"addr 4");
+
+			queue.enqueue(accounts[5]);
+			currentSize = await queue.qsize.call();
+			assert.equal(currentSize.valueOf(), 5,	"can't add more");
+
+			queue.enqueue(accounts[6]);
+			currentSize = await queue.qsize.call();
+			assert.equal(currentSize.valueOf(), 5,	"can't add more");
+		});
+
+        // it("dequeue", async function() {
+        //     let currentSize = await queue.qsize.call();
+        //
+        //     queue.enqueue(accounts[1]);
+		// 	currentSize = await queue.qsize.call();
+        //     assert.equal(currentSize.valueOf(), 1,	"1 addr added");
+        //
+        //     queue.dequeue();
+		// 	currentSize = await queue.qsize.call();
+        //     assert.equal(currentSize.valueOf(), 0,	"1 addr removed");
+        //
+        // });
 	});
 
-	describe('Your string here', function() {
-		it("your string here", async function() {
-				// YOUR CODE HERE
-			});
-		// YOUR CODE HERE
-	});
 });

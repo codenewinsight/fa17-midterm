@@ -1,4 +1,4 @@
-pragma solidity ^0.4.15;
+pragma solidity ^0.5.0;
 
 /**
  * @title Queue
@@ -8,82 +8,90 @@ pragma solidity ^0.4.15;
  */
 
 contract Queue {
+    struct QueueSt{
+        address[] data;
+        uint256[] time;
+        uint8 front;
+        uint8 back;
+    }
+
 	/* State variables */
-	uint8 private size = 5;
-	uint8 private index = 0xFF;
-	mapping (uint8 => address) private _addresses;
-	mapping (address => uint8) private _indexes;
-	mapping (address => uint256) private _releaseTime;
-	uint8 constant _timeDiff = 3600;
+    uint16 constant TIME_DIFF = 3600;
 
 	/* Add events */
-	event Enqueue(address _sender);
-	event Dequeue(address _sender);
+
 
 	/* Add constructor */
-	function Queue (){
+	constructor() public {
 
 	}
 
 	/* Returns the number of people waiting in line */
-	function qsize() constant returns(uint8) {
-		return index;
+	function qsize(QueueSt storage q_) view internal returns(uint8) {
+        return q_.back - q_.front;
 	}
 
-	/* Returns whether the queue is empty or not */
-	function empty() constant returns(bool) {
-		if (index != 0)
-		  return true;
+    /* Returns the capacity of queue */
+    function capacity(QueueSt storage q_) view internal returns(uint8) {
+        return ((uint8)(q_.data.length)) - 1;
+    }
 
-		return false;
+	/* Returns whether the queue is empty or not */
+	function empty(QueueSt storage q_) view internal returns(bool) {
+        if (qsize(q_) > 0)
+            return true;
+
+        return false;
 	}
 
 	/* Returns the address of the person in the front of the queue */
-	function getFirst() constant returns(address) {
-		return _addresses[0];
+	function getFirst(QueueSt storage q_) view internal returns(address) {
+        if (q_.back == q_.front)
+            return address(0); // throw;
+
+        return q_.data[q_.front];
 	}
 
 	/* Allows `msg.sender` to check their position in the queue */
-	function checkPlace() constant returns(uint8) {
-	  return 	_indexes[msg.sender];
+	function checkPlace(QueueSt storage q_) view internal returns(uint8) {
+        uint8 i = 0xFF;
+
+        //Iterate to find matching address
+        for (i = 0; i <= q_.back; i++){
+            if (msg.sender == q_.data[i])
+                break;
+        }
+
+        return i;
 	}
 
 	/* Allows anyone to expel the first person in line if their time
 	 * limit is up
 	 */
-	function checkTime() {
-		if (index >= (size - 1)){
-			if (_releaseTime[_addresses[0]] > now)
-			  dequeue();
-		}
+	function checkTime(QueueSt storage q_) internal {
+        if (q_.time[q_.front] > now)
+		    pop(q_);
 	}
 
 	/* Removes the first person in line; either when their time is up or when
 	 * they are done with their purchase
 	 */
-	function dequeue() {
-		if (index >=1 ){
-			 _indexes[_addresses[0]] = 0;
-			 _releaseTime[_addresses[0]] = 0;
-			 _addresses[0] = 0x0;
-			 index -= 1;
-		}
+	function pop(QueueSt storage q_) internal {
+        if (q_.back == q_.front)
+            return; // throw;
+        //r = q.data[q_.front];
+        delete q_.data[q_.front];
+        delete q_.time[q_.front];
+        q_.front = (q_.front + 1) % ((uint8)(q_.data.length)) ;
 	}
 
 	/* Places `addr` in the first empty position in the queue */
-	function enqueue(address addr) {
-		//if queue is full, check whether the first one should expire
-		if (index >= (size - 1)){
-			if (_releaseTime[_addresses[0]] > now)
-			  dequeue();
-		}
-
-		if (index < (size - 1)){
-      index += 1;
-		  _indexes[addr] = index;
-		  _addresses[index] = addr;
-		  _releaseTime[addr] = now + _timeDiff;
-	  }
+	function push(QueueSt storage q_, address addr_) internal {
+        // if ((q_.back + 1) % q_.data.length == q_.front)
+        //     return; // throw;
+        q_.data[q_.back] = addr_;
+        q_.time[q_.back] = now;//TIME_DIFF;
+        q_.back = (q_.back + 1) % ((uint8)(q_.data.length));
 	}
 
 }
