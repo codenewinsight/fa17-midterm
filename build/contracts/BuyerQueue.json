@@ -1,0 +1,1447 @@
+{
+  "contractName": "BuyerQueue",
+  "abi": [
+    {
+      "inputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "addr_",
+          "type": "address"
+        }
+      ],
+      "name": "enqueue",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "dequeue",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "qsize",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x608060405234801561001057600080fd5b50600560008001816100229190610064565b5060008060020160006101000a81548160ff021916908360ff16021790555060008060020160016101000a81548160ff021916908360ff1602179055506100b5565b81548183558181111561008b5781836000526020600020918201910161008a9190610090565b5b505050565b6100b291905b808211156100ae576000816000905550600101610096565b5090565b90565b610370806100c46000396000f3fe608060405260043610610057576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680633e3c9eae1461005c5780638f807f6b1461008d578063957908d1146100de575b600080fd5b34801561006857600080fd5b506100716100f5565b604051808260ff1660ff16815260200191505060405180910390f35b34801561009957600080fd5b506100dc600480360360208110156100b057600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610106565b005b3480156100ea57600080fd5b506100f3610114565b005b60006101016000610120565b905090565b61011160008261014e565b50565b61011e600061023d565b565b60008160020160009054906101000a900460ff168260020160019054906101000a900460ff16039050919050565b80826000018360020160019054906101000a900460ff1660ff1681548110151561017457fe5b9060005260206000200160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555042826001018360020160019054906101000a900460ff1660ff168154811015156101e257fe5b9060005260206000200181905550816000018054905060ff1660018360020160019054906101000a900460ff160160ff1681151561021c57fe5b068260020160016101000a81548160ff021916908360ff1602179055505050565b8060020160009054906101000a900460ff1660ff168160020160019054906101000a900460ff1660ff16141561027257610341565b806000018160020160009054906101000a900460ff1660ff1681548110151561029757fe5b9060005260206000200160006101000a81549073ffffffffffffffffffffffffffffffffffffffff0219169055806001018160020160009054906101000a900460ff1660ff168154811015156102e957fe5b9060005260206000200160009055806000018054905060ff1660018260020160009054906101000a900460ff160160ff1681151561032357fe5b068160020160006101000a81548160ff021916908360ff1602179055505b5056fea165627a7a7230582084e26ea0e3da867ea45cec5bc72272c284d28878692d7035b020d271a95520eb0029",
+  "deployedBytecode": "0x608060405260043610610057576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680633e3c9eae1461005c5780638f807f6b1461008d578063957908d1146100de575b600080fd5b34801561006857600080fd5b506100716100f5565b604051808260ff1660ff16815260200191505060405180910390f35b34801561009957600080fd5b506100dc600480360360208110156100b057600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610106565b005b3480156100ea57600080fd5b506100f3610114565b005b60006101016000610120565b905090565b61011160008261014e565b50565b61011e600061023d565b565b60008160020160009054906101000a900460ff168260020160019054906101000a900460ff16039050919050565b80826000018360020160019054906101000a900460ff1660ff1681548110151561017457fe5b9060005260206000200160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555042826001018360020160019054906101000a900460ff1660ff168154811015156101e257fe5b9060005260206000200181905550816000018054905060ff1660018360020160019054906101000a900460ff160160ff1681151561021c57fe5b068260020160016101000a81548160ff021916908360ff1602179055505050565b8060020160009054906101000a900460ff1660ff168160020160019054906101000a900460ff1660ff16141561027257610341565b806000018160020160009054906101000a900460ff1660ff1681548110151561029757fe5b9060005260206000200160006101000a81549073ffffffffffffffffffffffffffffffffffffffff0219169055806001018160020160009054906101000a900460ff1660ff168154811015156102e957fe5b9060005260206000200160009055806000018054905060ff1660018260020160009054906101000a900460ff160160ff1681151561032357fe5b068160020160006101000a81548160ff021916908360ff1602179055505b5056fea165627a7a7230582084e26ea0e3da867ea45cec5bc72272c284d28878692d7035b020d271a95520eb0029",
+  "sourceMap": "304:395:0:-;;;360:111;8:9:-1;5:2;;;30:1;27;20:12;5:2;360:111:0;412:1;391:6;:11;;:22;;;;;:::i;:::-;;438:1;423:6;:12;;;:16;;;;;;;;;;;;;;;;;;463:1;449:6;:11;;;:15;;;;;;;;;;;;;;;;;;304:395;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;",
+  "deployedSourceMap": "304:395:0:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;615:82;;8:9:-1;5:2;;;30:1;27;20:12;5:2;615:82:0;;;;;;;;;;;;;;;;;;;;;;;;;;;476:75;;8:9:-1;5:2;;;30:1;27;20:12;5:2;476:75:0;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;476:75:0;;;;;;;;;;;;;;;;;;;;;;556:54;;8:9:-1;5:2;;;30:1;27;20:12;5:2;556:54:0;;;;;;615:82;653:5;677:13;683:6;677:5;:13::i;:::-;670:20;;615:82;:::o;476:75::-;525:19;530:6;538:5;525:4;:19::i;:::-;476:75;:::o;556:54::-;592:11;596:6;592:3;:11::i;:::-;556:54::o;600:103:2:-;657:5;691:2;:8;;;;;;;;;;;;681:2;:7;;;;;;;;;;;;:18;674:25;;600:103;;;:::o;2310:293::-;2489:5;2470:2;:7;;2478:2;:7;;;;;;;;;;;;2470:16;;;;;;;;;;;;;;;;;;;;:24;;;;;;;;;;;;;;;;;;2523:3;2504:2;:7;;2512:2;:7;;;;;;;;;;;;2504:16;;;;;;;;;;;;;;;;;;;:22;;;;2583:2;:7;;:14;;;;2558:41;;2569:1;2559:2;:7;;;;;;;;;;;;:11;2558:41;;;;;;;;;;2548:2;:7;;;:51;;;;;;;;;;;;;;;;;;2310:293;;:::o;1972:273::-;2039:2;:8;;;;;;;;;;;;2028:19;;:2;:7;;;;;;;;;;;;:19;;;2024:44;;;2061:7;;2024:44;2126:2;:7;;2134:2;:8;;;;;;;;;;;;2126:17;;;;;;;;;;;;;;;;;;;;2119:24;;;;;;;;;;;2160:2;:7;;2168:2;:8;;;;;;;;;;;;2160:17;;;;;;;;;;;;;;;;;;;2153:24;;;2224:2;:7;;:14;;;;2198:42;;2210:1;2199:2;:8;;;;;;;;;;;;:12;2198:42;;;;;;;;;;2187:2;:8;;;:53;;;;;;;;;;;;;;;;;;1972:273;;:::o",
+  "source": "pragma solidity ^0.5.0;\n\nimport './Queue.sol';\n\n/**\n * @title Queue\n * @dev Data structure contract used in `Crowdsale.sol`\n * Allows buyers to line up on a first-in-first-out basis\n * See this example: http://interactivepython.org/courselib/static/pythonds/BasicDS/ImplementingaQueueinPython.html\n */\n\n\ncontract BuyerQueue is Queue {\n    QueueSt buyers;\n\n    constructor() public {\n        buyers.data.length = 5;\n        buyers.front = 0;\n        buyers.back = 0;\n    }\n    function enqueue(address addr_) public {\n        push(buyers, addr_);\n    }\n    function dequeue() public {\n        pop(buyers);\n    }\n    function qsize() public view returns (uint8) {\n        return qsize(buyers);\n    }\n}\n",
+  "sourcePath": "/home/admin/development/bc/fa17-midterm/contracts/BuyerQueue.sol",
+  "ast": {
+    "absolutePath": "/home/admin/development/bc/fa17-midterm/contracts/BuyerQueue.sol",
+    "exportedSymbols": {
+      "BuyerQueue": [
+        60
+      ]
+    },
+    "id": 61,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:0"
+      },
+      {
+        "absolutePath": "/home/admin/development/bc/fa17-midterm/contracts/Queue.sol",
+        "file": "./Queue.sol",
+        "id": 2,
+        "nodeType": "ImportDirective",
+        "scope": 61,
+        "sourceUnit": 356,
+        "src": "25:21:0",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 3,
+              "name": "Queue",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 355,
+              "src": "327:5:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Queue_$355",
+                "typeString": "contract Queue"
+              }
+            },
+            "id": 4,
+            "nodeType": "InheritanceSpecifier",
+            "src": "327:5:0"
+          }
+        ],
+        "contractDependencies": [
+          355
+        ],
+        "contractKind": "contract",
+        "documentation": "@title Queue\n@dev Data structure contract used in `Crowdsale.sol`\nAllows buyers to line up on a first-in-first-out basis\nSee this example: http://interactivepython.org/courselib/static/pythonds/BasicDS/ImplementingaQueueinPython.html",
+        "fullyImplemented": true,
+        "id": 60,
+        "linearizedBaseContracts": [
+          60,
+          355
+        ],
+        "name": "BuyerQueue",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 6,
+            "name": "buyers",
+            "nodeType": "VariableDeclaration",
+            "scope": 60,
+            "src": "339:14:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_struct$_QueueSt_$130_storage",
+              "typeString": "struct Queue.QueueSt"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 5,
+              "name": "QueueSt",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 130,
+              "src": "339:7:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_QueueSt_$130_storage_ptr",
+                "typeString": "struct Queue.QueueSt"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 29,
+              "nodeType": "Block",
+              "src": "381:90:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 15,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 9,
+                          "name": "buyers",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 6,
+                          "src": "391:6:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_QueueSt_$130_storage",
+                            "typeString": "struct Queue.QueueSt storage ref"
+                          }
+                        },
+                        "id": 12,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "data",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 122,
+                        "src": "391:11:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_address_$dyn_storage",
+                          "typeString": "address[] storage ref"
+                        }
+                      },
+                      "id": 13,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "length",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "391:18:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "35",
+                      "id": 14,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "412:1:0",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_5_by_1",
+                        "typeString": "int_const 5"
+                      },
+                      "value": "5"
+                    },
+                    "src": "391:22:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 16,
+                  "nodeType": "ExpressionStatement",
+                  "src": "391:22:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 21,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 17,
+                        "name": "buyers",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 6,
+                        "src": "423:6:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_QueueSt_$130_storage",
+                          "typeString": "struct Queue.QueueSt storage ref"
+                        }
+                      },
+                      "id": 19,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "front",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 127,
+                      "src": "423:12:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint8",
+                        "typeString": "uint8"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "30",
+                      "id": 20,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "438:1:0",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_0_by_1",
+                        "typeString": "int_const 0"
+                      },
+                      "value": "0"
+                    },
+                    "src": "423:16:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "id": 22,
+                  "nodeType": "ExpressionStatement",
+                  "src": "423:16:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 27,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 23,
+                        "name": "buyers",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 6,
+                        "src": "449:6:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_QueueSt_$130_storage",
+                          "typeString": "struct Queue.QueueSt storage ref"
+                        }
+                      },
+                      "id": 25,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "back",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 129,
+                      "src": "449:11:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint8",
+                        "typeString": "uint8"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "30",
+                      "id": 26,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "463:1:0",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_0_by_1",
+                        "typeString": "int_const 0"
+                      },
+                      "value": "0"
+                    },
+                    "src": "449:15:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "id": 28,
+                  "nodeType": "ExpressionStatement",
+                  "src": "449:15:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 30,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 7,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "371:2:0"
+            },
+            "returnParameters": {
+              "id": 8,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "381:0:0"
+            },
+            "scope": 60,
+            "src": "360:111:0",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 40,
+              "nodeType": "Block",
+              "src": "515:36:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 36,
+                        "name": "buyers",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 6,
+                        "src": "530:6:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_QueueSt_$130_storage",
+                          "typeString": "struct Queue.QueueSt storage ref"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 37,
+                        "name": "addr_",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 32,
+                        "src": "538:5:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_struct$_QueueSt_$130_storage",
+                          "typeString": "struct Queue.QueueSt storage ref"
+                        },
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "id": 35,
+                      "name": "push",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 354,
+                      "src": "525:4:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_QueueSt_$130_storage_ptr_$_t_address_$returns$__$",
+                        "typeString": "function (struct Queue.QueueSt storage pointer,address)"
+                      }
+                    },
+                    "id": 38,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "525:19:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 39,
+                  "nodeType": "ExpressionStatement",
+                  "src": "525:19:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 41,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "enqueue",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 33,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 32,
+                  "name": "addr_",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 41,
+                  "src": "493:13:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 31,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "493:7:0",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "492:15:0"
+            },
+            "returnParameters": {
+              "id": 34,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "515:0:0"
+            },
+            "scope": 60,
+            "src": "476:75:0",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 48,
+              "nodeType": "Block",
+              "src": "582:28:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 45,
+                        "name": "buyers",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 6,
+                        "src": "596:6:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_QueueSt_$130_storage",
+                          "typeString": "struct Queue.QueueSt storage ref"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_struct$_QueueSt_$130_storage",
+                          "typeString": "struct Queue.QueueSt storage ref"
+                        }
+                      ],
+                      "id": 44,
+                      "name": "pop",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 310,
+                      "src": "592:3:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_QueueSt_$130_storage_ptr_$returns$__$",
+                        "typeString": "function (struct Queue.QueueSt storage pointer)"
+                      }
+                    },
+                    "id": 46,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "592:11:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 47,
+                  "nodeType": "ExpressionStatement",
+                  "src": "592:11:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 49,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "dequeue",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 42,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "572:2:0"
+            },
+            "returnParameters": {
+              "id": 43,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "582:0:0"
+            },
+            "scope": 60,
+            "src": "556:54:0",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 58,
+              "nodeType": "Block",
+              "src": "660:37:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 55,
+                        "name": "buyers",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 6,
+                        "src": "683:6:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_QueueSt_$130_storage",
+                          "typeString": "struct Queue.QueueSt storage ref"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_struct$_QueueSt_$130_storage",
+                          "typeString": "struct Queue.QueueSt storage ref"
+                        }
+                      ],
+                      "id": 54,
+                      "name": "qsize",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        59,
+                        151
+                      ],
+                      "referencedDeclaration": 151,
+                      "src": "677:5:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_view$_t_struct$_QueueSt_$130_storage_ptr_$returns$_t_uint8_$",
+                        "typeString": "function (struct Queue.QueueSt storage pointer) view returns (uint8)"
+                      }
+                    },
+                    "id": 56,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "677:13:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "functionReturnParameters": 53,
+                  "id": 57,
+                  "nodeType": "Return",
+                  "src": "670:20:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 59,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "qsize",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 50,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "629:2:0"
+            },
+            "returnParameters": {
+              "id": 53,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 52,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 59,
+                  "src": "653:5:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  },
+                  "typeName": {
+                    "id": 51,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "653:5:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "652:7:0"
+            },
+            "scope": 60,
+            "src": "615:82:0",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 61,
+        "src": "304:395:0"
+      }
+    ],
+    "src": "0:700:0"
+  },
+  "legacyAST": {
+    "absolutePath": "/home/admin/development/bc/fa17-midterm/contracts/BuyerQueue.sol",
+    "exportedSymbols": {
+      "BuyerQueue": [
+        60
+      ]
+    },
+    "id": 61,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:0"
+      },
+      {
+        "absolutePath": "/home/admin/development/bc/fa17-midterm/contracts/Queue.sol",
+        "file": "./Queue.sol",
+        "id": 2,
+        "nodeType": "ImportDirective",
+        "scope": 61,
+        "sourceUnit": 356,
+        "src": "25:21:0",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 3,
+              "name": "Queue",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 355,
+              "src": "327:5:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Queue_$355",
+                "typeString": "contract Queue"
+              }
+            },
+            "id": 4,
+            "nodeType": "InheritanceSpecifier",
+            "src": "327:5:0"
+          }
+        ],
+        "contractDependencies": [
+          355
+        ],
+        "contractKind": "contract",
+        "documentation": "@title Queue\n@dev Data structure contract used in `Crowdsale.sol`\nAllows buyers to line up on a first-in-first-out basis\nSee this example: http://interactivepython.org/courselib/static/pythonds/BasicDS/ImplementingaQueueinPython.html",
+        "fullyImplemented": true,
+        "id": 60,
+        "linearizedBaseContracts": [
+          60,
+          355
+        ],
+        "name": "BuyerQueue",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 6,
+            "name": "buyers",
+            "nodeType": "VariableDeclaration",
+            "scope": 60,
+            "src": "339:14:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_struct$_QueueSt_$130_storage",
+              "typeString": "struct Queue.QueueSt"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 5,
+              "name": "QueueSt",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 130,
+              "src": "339:7:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_QueueSt_$130_storage_ptr",
+                "typeString": "struct Queue.QueueSt"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 29,
+              "nodeType": "Block",
+              "src": "381:90:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 15,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 9,
+                          "name": "buyers",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 6,
+                          "src": "391:6:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_QueueSt_$130_storage",
+                            "typeString": "struct Queue.QueueSt storage ref"
+                          }
+                        },
+                        "id": 12,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "data",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 122,
+                        "src": "391:11:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_address_$dyn_storage",
+                          "typeString": "address[] storage ref"
+                        }
+                      },
+                      "id": 13,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "length",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "391:18:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "35",
+                      "id": 14,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "412:1:0",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_5_by_1",
+                        "typeString": "int_const 5"
+                      },
+                      "value": "5"
+                    },
+                    "src": "391:22:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 16,
+                  "nodeType": "ExpressionStatement",
+                  "src": "391:22:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 21,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 17,
+                        "name": "buyers",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 6,
+                        "src": "423:6:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_QueueSt_$130_storage",
+                          "typeString": "struct Queue.QueueSt storage ref"
+                        }
+                      },
+                      "id": 19,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "front",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 127,
+                      "src": "423:12:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint8",
+                        "typeString": "uint8"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "30",
+                      "id": 20,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "438:1:0",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_0_by_1",
+                        "typeString": "int_const 0"
+                      },
+                      "value": "0"
+                    },
+                    "src": "423:16:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "id": 22,
+                  "nodeType": "ExpressionStatement",
+                  "src": "423:16:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 27,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 23,
+                        "name": "buyers",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 6,
+                        "src": "449:6:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_QueueSt_$130_storage",
+                          "typeString": "struct Queue.QueueSt storage ref"
+                        }
+                      },
+                      "id": 25,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "back",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 129,
+                      "src": "449:11:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint8",
+                        "typeString": "uint8"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "30",
+                      "id": 26,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "463:1:0",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_0_by_1",
+                        "typeString": "int_const 0"
+                      },
+                      "value": "0"
+                    },
+                    "src": "449:15:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "id": 28,
+                  "nodeType": "ExpressionStatement",
+                  "src": "449:15:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 30,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 7,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "371:2:0"
+            },
+            "returnParameters": {
+              "id": 8,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "381:0:0"
+            },
+            "scope": 60,
+            "src": "360:111:0",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 40,
+              "nodeType": "Block",
+              "src": "515:36:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 36,
+                        "name": "buyers",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 6,
+                        "src": "530:6:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_QueueSt_$130_storage",
+                          "typeString": "struct Queue.QueueSt storage ref"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 37,
+                        "name": "addr_",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 32,
+                        "src": "538:5:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_struct$_QueueSt_$130_storage",
+                          "typeString": "struct Queue.QueueSt storage ref"
+                        },
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "id": 35,
+                      "name": "push",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 354,
+                      "src": "525:4:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_QueueSt_$130_storage_ptr_$_t_address_$returns$__$",
+                        "typeString": "function (struct Queue.QueueSt storage pointer,address)"
+                      }
+                    },
+                    "id": 38,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "525:19:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 39,
+                  "nodeType": "ExpressionStatement",
+                  "src": "525:19:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 41,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "enqueue",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 33,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 32,
+                  "name": "addr_",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 41,
+                  "src": "493:13:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 31,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "493:7:0",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "492:15:0"
+            },
+            "returnParameters": {
+              "id": 34,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "515:0:0"
+            },
+            "scope": 60,
+            "src": "476:75:0",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 48,
+              "nodeType": "Block",
+              "src": "582:28:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 45,
+                        "name": "buyers",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 6,
+                        "src": "596:6:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_QueueSt_$130_storage",
+                          "typeString": "struct Queue.QueueSt storage ref"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_struct$_QueueSt_$130_storage",
+                          "typeString": "struct Queue.QueueSt storage ref"
+                        }
+                      ],
+                      "id": 44,
+                      "name": "pop",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 310,
+                      "src": "592:3:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_QueueSt_$130_storage_ptr_$returns$__$",
+                        "typeString": "function (struct Queue.QueueSt storage pointer)"
+                      }
+                    },
+                    "id": 46,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "592:11:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 47,
+                  "nodeType": "ExpressionStatement",
+                  "src": "592:11:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 49,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "dequeue",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 42,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "572:2:0"
+            },
+            "returnParameters": {
+              "id": 43,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "582:0:0"
+            },
+            "scope": 60,
+            "src": "556:54:0",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 58,
+              "nodeType": "Block",
+              "src": "660:37:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 55,
+                        "name": "buyers",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 6,
+                        "src": "683:6:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_QueueSt_$130_storage",
+                          "typeString": "struct Queue.QueueSt storage ref"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_struct$_QueueSt_$130_storage",
+                          "typeString": "struct Queue.QueueSt storage ref"
+                        }
+                      ],
+                      "id": 54,
+                      "name": "qsize",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        59,
+                        151
+                      ],
+                      "referencedDeclaration": 151,
+                      "src": "677:5:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_view$_t_struct$_QueueSt_$130_storage_ptr_$returns$_t_uint8_$",
+                        "typeString": "function (struct Queue.QueueSt storage pointer) view returns (uint8)"
+                      }
+                    },
+                    "id": 56,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "677:13:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "functionReturnParameters": 53,
+                  "id": 57,
+                  "nodeType": "Return",
+                  "src": "670:20:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 59,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "qsize",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 50,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "629:2:0"
+            },
+            "returnParameters": {
+              "id": 53,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 52,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 59,
+                  "src": "653:5:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  },
+                  "typeName": {
+                    "id": 51,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "653:5:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "652:7:0"
+            },
+            "scope": 60,
+            "src": "615:82:0",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 61,
+        "src": "304:395:0"
+      }
+    ],
+    "src": "0:700:0"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.0+commit.1d4f565a.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.0",
+  "updatedAt": "2018-12-19T03:57:30.404Z",
+  "devdoc": {
+    "details": "Data structure contract used in `Crowdsale.sol` Allows buyers to line up on a first-in-first-out basis See this example: http://interactivepython.org/courselib/static/pythonds/BasicDS/ImplementingaQueueinPython.html",
+    "methods": {},
+    "title": "Queue"
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
