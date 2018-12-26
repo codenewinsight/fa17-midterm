@@ -1,6 +1,6 @@
 pragma solidity ^0.5.0;
 
-import "../Token.sol";
+import "../token/Token.sol";
 
 // mock class using ERC20
 contract ERC20Mock is Token {

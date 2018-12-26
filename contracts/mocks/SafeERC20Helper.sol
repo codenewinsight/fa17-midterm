@@ -1,10 +1,14 @@
 pragma solidity ^0.5.0;
 
 import "../interfaces/IERC20.sol";
-import "../SafeERC20.sol";
+import "../token/SafeERC20.sol";
 
-contract ERC20FailingMock {
+contract ERC20FailingMock is IERC20 {
     uint256 private _allowance;
+
+    function balanceOf(address) external view returns (uint256 balance){
+        return 0;
+    }
 
     function transfer(address, uint256) public returns (bool) {
         return false;
@@ -23,8 +27,12 @@ contract ERC20FailingMock {
     }
 }
 
-contract ERC20SucceedingMock {
+contract ERC20SucceedingMock is IERC20 {
     uint256 private _allowance;
+
+    function balanceOf(address) external view returns (uint256 balance){
+        return 0;
+    }
 
     function transfer(address, uint256) public returns (bool) {
         return true;
@@ -54,8 +62,8 @@ contract SafeERC20Helper {
     IERC20 private _succeeding;
 
     constructor () public {
-        _failing = IERC20(new ERC20FailingMock());
-        _succeeding = IERC20(new ERC20SucceedingMock());
+        _failing = new ERC20FailingMock();//IERC20(new ERC20FailingMock());
+        _succeeding = new ERC20SucceedingMock();//IERC20(new ERC20SucceedingMock());
     }
 
     // Using _failing
@@ -103,7 +111,8 @@ contract SafeERC20Helper {
     }
 
     function setAllowance(uint256 allowance_) public {
-        ERC20SucceedingMock(_succeeding).setAllowance(allowance_);
+        ERC20SucceedingMock succedingMock = ERC20SucceedingMock(address(_succeeding));
+        succedingMock.setAllowance(allowance_);
     }
 
     function allowance() public view returns (uint256) {
