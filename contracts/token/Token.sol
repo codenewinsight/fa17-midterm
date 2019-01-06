@@ -35,7 +35,7 @@ contract Token is IERC20, MinterRole {
 
        /// @param owner_ The address from which the balance will be retrieved
       /// @return The balance
-      function balanceOf(address owner_) public view returns (uint256 balance){
+      function balanceOf(address owner_) public view returns (uint256){
         return gBalances[owner_];
       }
 
@@ -43,7 +43,7 @@ contract Token is IERC20, MinterRole {
       /// @param to_ The address of the recipient
       /// @param value_ The amount of token to be transferred
       /// @return Whether the transfer was successful or not
-      function transfer(address to_, uint256 value_) public returns (bool success){
+      function transfer(address to_, uint256 value_) public returns (bool){
         _transfer(msg.sender, to_, value_);
         return true;
       }
@@ -53,7 +53,7 @@ contract Token is IERC20, MinterRole {
       /// @param to_ The address of the recipient
       /// @param value_ The amount of token to be transferred
       /// @return Whether the transfer was successful or not
-      function transferFrom(address from_, address to_, uint256 value_) public returns (bool success){
+      function transferFrom(address from_, address to_, uint256 value_) public returns (bool){
         gAllowed[from_][msg.sender] = gAllowed[from_][msg.sender].sub(value_);
         _transfer(from_, to_, value_);
         emit Approval(from_, msg.sender, gAllowed[from_][msg.sender]);
@@ -64,20 +64,20 @@ contract Token is IERC20, MinterRole {
       /// @param spender_ The address of the account able to transfer the tokens
       /// @param value_ The amount of tokens to be approved for transfer
       /// @return Whether the approval was successful or not
-      function approve(address spender_, uint256 value_) public returns (bool success){
+      function approve(address spender_, uint256 value_) public returns (bool){
         require(spender_ != address(0));
 
         gAllowed[msg.sender][spender_] = value_;
         emit Approval(msg.sender, spender_, value_);
         return true;
-      }
+    }
 
       /// @param owner_ The address of the account owning tokens
       /// @param spender_ The address of the account able to transfer the tokens
       /// @return Amount of remaining tokens gAllowed to spent
-      function allowance(address owner_, address spender_) public view returns (uint256 remaining){
-          return gAllowed[owner_][spender_];
-      }
+      function allowance(address owner_, address spender_) public view returns (uint256){
+        return gAllowed[owner_][spender_];
+    }
 
     /**
      * @dev Function to mint tokens

@@ -1,5 +1,6 @@
 function ether (n) {
-  return new web3.utils.BN(web3.toWei(n, 'ether'));
+  //return new web3.utils.BN(web3.utils.toWei(n, 'ether'));
+  return web3.utils.toWei(n, 'ether');
 }
 
 module.exports = {

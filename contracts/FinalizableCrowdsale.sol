@@ -15,7 +15,7 @@ contract FinalizableCrowdsale is TimedCrowdsale {
 
     event CrowdsaleFinalized();
 
-    constructor () internal {
+    constructor (uint256 rate, address payable wallet, IERC20 token, uint256 openingTime, uint256 closingTime) internal {
         _finalized = false;
     }
 

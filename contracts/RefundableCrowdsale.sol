@@ -35,8 +35,9 @@ contract RefundableCrowdsale is FinalizableCrowdsale {
      * @dev Constructor, creates RefundEscrow.
      * @param goal Funding goal
      */
-    constructor (uint256 goal) internal {
+    constructor (uint256 rate, address payable wallet, IERC20 token, uint256 openingTime, uint256 closingTime, uint256 goal) internal {
         require(goal > 0);
+        //address payable x = uint160(bytes20(wallet));
         _escrow = new RefundEscrow(wallet);
         _goal = goal;
     }
@@ -87,4 +88,5 @@ contract RefundableCrowdsale is FinalizableCrowdsale {
     function _forwardFunds() internal {
         _escrow.deposit.value(msg.value)(msg.sender);
     }
+
 }
