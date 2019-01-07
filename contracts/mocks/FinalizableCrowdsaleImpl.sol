@@ -9,5 +9,6 @@ contract FinalizableCrowdsaleImpl is FinalizableCrowdsale {
         public
         Crowdsale(rate, wallet, token)
         TimedCrowdsale(rate, wallet, token, openingTime, closingTime)
+        FinalizableCrowdsale(rate, wallet, token, openingTime, closingTime)
     {}
 }

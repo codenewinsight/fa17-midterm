@@ -20,7 +20,13 @@ import "./utils/ReentrancyGuard.sol";
 contract Crowdsale is ReentrancyGuard {
     using SafeMath for uint256;
     using SafeERC20 for IERC20;
-
+  
+    struct CrowdsaleSt{
+        uint256 rate; 
+        address payable wallet;
+        IERC20 token;
+    }
+    
     // The token being sold
     IERC20 private _token;
 

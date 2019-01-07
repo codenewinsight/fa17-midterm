@@ -5,6 +5,7 @@ const shouldFail = require('./helpers/shouldFail');
 const { balanceDifference } = require('./helpers/balanceDifference');
 const { ether } = require('./helpers/ether');
 const { ZERO_ADDRESS } = require('./helpers/constants');
+const { ethGetBalance } = require('./helpers/web3');
 
 const BigNumber = web3.utils.BN;
 
@@ -142,14 +143,17 @@ contract('Crowdsale', function ([_, investor, wallet, purchaser]) {
           // (await balanceDifference(wallet, () =>
           //   this.crowdsale.buyTokens(investor, { value, from: purchaser }))
           // ).should.be.bignumber.equal(value);
+          //let bal = await ethGetBalance(wallet);
+          //console.log(bal);
 
-            await balanceDifference(wallet, () =>
-                 this.crowdsale.buyTokens(investor, { value, from: purchaser }))
-            .then(function (result) {
-               assert.equal(result.valueOf(), value.toNumber(),	"should forward funds to wallet");
-            }).catch(function(e) {
-               console.log(e);
-            });
+         let result = await balanceDifference(wallet, () =>
+                 this.crowdsale.buyTokens(investor, { value, from: purchaser }));
+         assert.equal(result, value,	"should forward funds to wallet");
+
+          console.log(result);
+          
+         //bal = await ethGetBalance(wallet);
+        //  console.log(bal);
         });
       });
     });

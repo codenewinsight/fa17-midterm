@@ -15,6 +15,7 @@ contract RefundableCrowdsaleImpl is RefundableCrowdsale {
         public
         Crowdsale(rate, wallet, token)
         TimedCrowdsale(rate, wallet, token, openingTime, closingTime)
-        RefundableCrowdsale(rate, wallet, token, openingTime, closingTime, goal)
+        FinalizableCrowdsale(rate, wallet, token, openingTime, closingTime)
+        //RefundableCrowdsale(rate, wallet, token, openingTime, closingTime, goal)
     {}
 }
